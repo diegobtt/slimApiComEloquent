@@ -16,3 +16,5 @@ $app->get('/time',TimeController::class . ':index');
 $app->post('/time',TimeController::class . ':adicionaTime');
 $app->put('/time/{id}',TimeController::class . ':atualizaTime');
 $app->delete('/time/{id}',TimeController::class . ':removeTime');
+$app->get('/time/jogadores/{id}',TimeController::class . ':listaJogadores');
+

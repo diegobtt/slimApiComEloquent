@@ -98,4 +98,12 @@ class TimeController
             return $response;
         }
     }
+
+    public function listaJogadores($request,$response,$args){
+        $id = $args['id'];
+        $jogadores = $this->time->findJogadoresByTime($id);
+        $response_str = json_encode($jogadores);
+        $response->getBody()->write($response_str);
+        return $response;
+    }
 }

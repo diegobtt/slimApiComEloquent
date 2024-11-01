@@ -2,10 +2,11 @@
 
 namespace app\database\models;
 
-use Illuminate\Database\Eloquent\Model;
+use app\database\Connection;
+use PDOException;
 
-class Jogador extends Model{
+class Jogador extends Base{
 
-    
+    protected $table='jogador';
 
 }
